@@ -3,50 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MalihSolutions - Home</title>
+    <title>MalihSolutions - Mobile App Development</title>
+    <meta name="description" content="MalihSolutions: Creating innovative mobile applications that simplify everyday tasks. Discover BuddySplit and our other cutting-edge apps.">
+    <meta name="keywords" content="MalihSolutions, mobile app development, BuddySplit, expense management, iOS apps, innovative solutions">
+    <link rel="icon" type="image/svg+xml" href="product/buddysplit/transparent_logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-blue: #5265FF;
+            --dark-blue: #4054E6;
+            --light-blue: #e0f2f7;
+            --text-dark: #2c3e50;
+            --text-medium: #555;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background-color: #fff;
-            margin: auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            list-style: none;
+            background: linear-gradient(to bottom right, var(--light-blue), #c1e4f2);
+            color: var(--text-medium);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
-        li {
-            margin: 15px 0;
+
+        .container {
+            background-color: var(--bg-white);
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-out;
         }
-        a {
-            text-decoration: none;
-            color: #007bff;
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: var(--text-dark);
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: var(--text-medium);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .intro-text {
             font-size: 1.2em;
+            margin-bottom: 40px;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .product-card {
+            background: var(--bg-light);
+            border-left: 5px solid var(--primary-blue);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .product-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .product-card p {
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .product-link:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-left: 5px solid #95a5a6;
+            opacity: 0.8;
+        }
+
+        .coming-soon h3 {
+            color: #7f8c8d;
+        }
+
+        .coming-soon .product-link {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .coming-soon .product-link:hover {
+            background-color: #95a5a6;
+            transform: none;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--text-dark);
+            color: white;
+            font-size: 0.9em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer a {
+            color: #a0d9ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .container {
+                padding: 30px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to MalihSolutions!</h1>
-        <p>Explore our projects:</p>
-        <ul>
-            <li><a href="/product/buddysplit/">BuddySplit App</a></li>
-            <!-- Add links to other projects here later -->
-        </ul>
+        <p class="intro-text">We create innovative mobile applications that simplify everyday tasks and enhance your digital experience. Discover our cutting-edge solutions designed with you in mind.</p>
+
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-header">
+                    <img src="product/buddysplit/transparent_logo.svg" alt="BuddySplit Logo" class="product-logo">
+                    <h3>BuddySplit</h3>
+                </div>
+                <p>Your ultimate companion for effortlessly managing shared expenses with friends and groups. Split bills equally, unequally, by percentage, or by share amount with ease.</p>
+                <p><strong>Features:</strong> Group management, flexible expense splitting, balance tracking, payment history, and seamless member invitations.</p>
+                <a href="product/buddysplit/index.html" class="product-link">Learn More</a>
+            </div>
+            
+            <div class="product-card coming-soon">
+                <h3>More Apps Coming Soon</h3>
+                <p>We're constantly working on new innovative solutions to make your life easier. Stay tuned for exciting new mobile applications that will transform how you handle everyday tasks.</p>
+                <a href="#" class="product-link">Coming Soon</a>
+            </div>
+        </div>
+
+        <h2>Why Choose MalihSolutions?</h2>
+        <p>At MalihSolutions, we believe technology should simplify life, not complicate it. Our apps are designed with intuitive interfaces, robust functionality, and your privacy in mind. We're committed to delivering exceptional user experiences that make a real difference in your daily routine.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 MalihSolutions. All rights reserved.</p>
+        <p>Creating innovative mobile solutions for everyday life.</p>
     </div>
 </body>
 </html>

@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - BuddySplit</title>
     <meta name="description" content="Privacy Policy for BuddySplit - Learn how we protect your data in our bill-splitting app.">
+    <link rel="icon" type="image/svg+xml" href="transparent_logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
+        :root {
+            --primary-blue: #5265FF;
+            --dark-blue: #4054E6;
+            --light-blue: #e0f2f7;
+            --text-dark: #2c3e50;
+            --text-medium: #555;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
         }
 
         * {
@@ -18,72 +25,87 @@
             box-sizing: border-box;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
+            color: var(--text-medium);
+            background: linear-gradient(to bottom right, var(--light-blue), #c1e4f2);
+            min-height: 100vh;
         }
 
         .header {
-            background: linear-gradient(135deg, #5265FF 0%, #4054E6 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 60px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(82, 101, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(82, 101, 255, 0.3);
+        }
+
+        .header .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 3em;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 15px;
         }
 
         .header p {
-            font-size: 1.1rem;
+            font-size: 1.2em;
             opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 1rem;
+            line-height: 1.6;
+        }
+
+        .logo {
+            max-width: 80px;
+            height: 80px;
+            margin: 0 auto 20px auto;
+            display: block;
+            background: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 20px;
         }
 
         .content {
-            background: white;
-            margin: 2rem auto;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: var(--bg-white);
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .last-updated {
-            background: #f8f9ff;
-            border-left: 4px solid #5265FF;
-            padding: 1rem 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 0 8px 8px 0;
-            font-weight: 500;
-            color: #5265FF;
+            background: var(--bg-light);
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
         }
 
         h2 {
-            color: #5265FF;
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-weight: 600;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 0.5rem;
         }
 
         h2:first-of-type {
@@ -91,138 +113,154 @@
         }
 
         h3 {
-            color: #4054E6;
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 0.8rem;
+            color: var(--dark-blue);
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
         h4 {
-            color: #333;
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.6rem;
+            color: var(--text-dark);
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: #555;
+            margin-bottom: 20px;
+            color: var(--text-medium);
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
         ul {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 25px;
         }
 
         li {
-            margin-bottom: 0.5rem;
-            color: #555;
+            margin-bottom: 8px;
+            color: var(--text-medium);
         }
 
         li strong {
-            color: #333;
+            color: var(--text-dark);
+            font-weight: 600;
         }
 
         a {
-            color: #5265FF;
+            color: var(--primary-blue);
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: var(--dark-blue);
             text-decoration: underline;
-            color: #4054E6;
+        }
+
+        .overview-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f0f3ff 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .overview-box h2 {
+            margin-top: 0;
+            color: var(--primary-blue);
         }
 
         .contact-section {
-            background: #f8f9ff;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-top: 2rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
             border: 1px solid #e8ebff;
         }
 
         .contact-section h2 {
             margin-top: 0;
-            color: #5265FF;
-        }
-
-        .overview-box {
-            background: linear-gradient(135deg, #f8f9ff 0%, #f0f3ff 100%);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 4px solid #5265FF;
+            color: var(--primary-blue);
         }
 
         .rights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 20px;
+            margin: 30px 0;
         }
 
         .rights-card {
-            background: #f8f9ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #e8ebff;
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rights-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .rights-card h4 {
-            color: #5265FF;
+            color: var(--primary-blue);
             margin-top: 0;
         }
 
         .footer {
-            background: #333;
+            background: var(--text-dark);
             color: white;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            padding: 30px 0;
+            margin-top: 50px;
+            width: 100%;
         }
 
         .footer p {
             color: #ccc;
             margin: 0;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #a0d9ff;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: var(--primary-blue);
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.5em;
+            }
+            
+            .header {
+                padding: 40px 0;
             }
             
             .content {
-                padding: 2rem 1.5rem;
-                margin: 1rem;
-            }
-            
-            .container {
-                padding: 0 0.5rem;
+                padding: 30px 20px;
+                margin: 20px;
             }
             
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.8em;
             }
             
             .rights-grid {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .header, .footer {
-                background: none !important;
-                color: black !important;
-            }
-            
-            .content {
-                box-shadow: none;
-                margin: 0;
+                gap: 15px;
             }
         }
     </style>
@@ -230,8 +268,9 @@
 <body>
     <div class="header">
         <div class="container">
+            <img src="transparent_logo.svg" alt="BuddySplit Logo" class="logo">
             <h1>Privacy Policy</h1>
-            <p>Your privacy matters to us. Learn how BuddySplit protects your data.</p>
+            <p>Your privacy is important to us. Learn how BuddySplit protects and handles your personal information.</p>
         </div>
     </div>
 
@@ -259,177 +298,120 @@
                 <li><strong>Device</strong> means any device that can access the Service, such as a smartphone or tablet.</li>
                 <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
                 <li><strong>Service</strong> refers to the BuddySplit Application.</li>
-                <li><strong>You</strong> means the individual accessing or using the Service.</li>
+                <li><strong>You</strong> refers to the individual accessing or using the Service.</li>
             </ul>
 
             <h2>Information We Collect</h2>
-
-            <h3>Information You Provide</h3>
+            
+            <h3>Personal Information You Provide</h3>
+            <p>When you create an account and use BuddySplit, we may collect the following information:</p>
             <ul>
-                <li><strong>Registration Information:</strong> Name, email address, phone number, and password</li>
-                <li><strong>Profile Information:</strong> Profile picture, display name, and account preferences</li>
-                <li><strong>Expense Data:</strong> Expense descriptions, amounts, categories, dates, and notes</li>
-                <li><strong>Group Information:</strong> Group names, member lists, and group settings</li>
-                <li><strong>Payment Records:</strong> Payment amounts, dates, and settlement information</li>
-                <li><strong>Receipt Images:</strong> Photos of receipts uploaded to expenses</li>
-                <li><strong>Comments and Notes:</strong> Messages, comments, and notes added to expenses</li>
-                <li><strong>Contact Information:</strong> When you add friends, we store their contact information</li>
+                <li><strong>Account Information:</strong> Name, email address, profile picture (if provided)</li>
+                <li><strong>Authentication Data:</strong> Information from third-party authentication services (Apple Sign-In, Google Sign-In)</li>
+                <li><strong>Expense Data:</strong> Details about expenses you create, including amounts, descriptions, categories, and participants</li>
+                <li><strong>Group Information:</strong> Group names, member lists, and group-related activities</li>
+                <li><strong>Payment Information:</strong> Records of payments made or received within the app (we do not store actual payment method details)</li>
             </ul>
 
-            <h3>Information Collected Automatically</h3>
+            <h3>Automatically Collected Information</h3>
+            <p>We may automatically collect certain information when you use our Service:</p>
             <ul>
-                <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers, IP address</li>
-                <li><strong>Usage Data:</strong> How you interact with the app, features used, time spent, crash reports</li>
-                <li><strong>Analytics Data:</strong> App performance, user behavior patterns, and feature usage statistics</li>
-            </ul>
-
-            <h3>Information from Device Permissions</h3>
-            <p>With your permission, we may access:</p>
-            <ul>
-                <li><strong>Camera:</strong> To take photos of receipts and profile pictures</li>
-                <li><strong>Photo Library:</strong> To select images from your device</li>
-                <li><strong>Contacts:</strong> To help you find friends who use BuddySplit (contact information is only stored if you add them as friends)</li>
-                <li><strong>Notifications:</strong> To send you push notifications about expenses and group activity</li>
-            </ul>
-
-            <h2>Third-Party Services</h2>
-            <p>We use the following third-party services that may collect information about you:</p>
-            <ul>
-                <li><strong>Firebase (Google)</strong> - For user authentication, data storage, analytics, and crash reporting. Data is processed in the United States. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-                <li><strong>Google Sign-In</strong> - For authentication via Google accounts. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-                <li><strong>Apple App Store</strong> - For subscription payments and app distribution. <a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy</a></li>
-                <li><strong>Kingfisher</strong> - For image downloading and caching (open-source library)</li>
-                <li><strong>CodeScanner</strong> - For QR code scanning to join groups and add friends (open-source library)</li>
-                <li><strong>SwiftyCrop</strong> - For local image cropping functionality (open-source library)</li>
+                <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+                <li><strong>Usage Information:</strong> App usage patterns, features used, time spent in the app</li>
+                <li><strong>Log Information:</strong> Error logs, crash reports, and performance data</li>
             </ul>
 
             <h2>How We Use Your Information</h2>
-            <p>We use your personal data for the following purposes:</p>
+            <p>We use the collected information for various purposes:</p>
             <ul>
-                <li><strong>Provide the Service:</strong> To enable bill-splitting, expense tracking, and group management</li>
-                <li><strong>Account Management:</strong> To create and maintain your account</li>
-                <li><strong>Communication:</strong> To send you important service updates and push notifications</li>
-                <li><strong>Security:</strong> To protect against fraud and ensure account security</li>
-                <li><strong>Improvement:</strong> To analyze usage patterns and improve our Service</li>
+                <li><strong>Provide and Maintain Service:</strong> To operate and maintain the BuddySplit application</li>
+                <li><strong>Expense Management:</strong> To enable you to create, track, and manage shared expenses</li>
+                <li><strong>Group Functionality:</strong> To facilitate group creation, member management, and expense sharing</li>
+                <li><strong>Communication:</strong> To send you important service-related notifications</li>
+                <li><strong>Improve Service:</strong> To analyze usage patterns and improve app functionality</li>
+                <li><strong>Security:</strong> To detect, prevent, and address technical issues and security concerns</li>
                 <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
             </ul>
 
-            <h2>How We Share Your Information</h2>
-
-            <h3>Within the App</h3>
+            <h2>Information Sharing</h2>
+            
+            <h3>Within Groups</h3>
+            <p>When you join or create a group in BuddySplit:</p>
             <ul>
-                <li><strong>With Friends:</strong> When you add expenses with friends, they can see the expense details, amounts, and your participation</li>
-                <li><strong>With Group Members:</strong> All group members can view expenses, payments, and member information within that group</li>
-                <li><strong>Receipt Images:</strong> Receipt photos are visible to all participants in the related expense</li>
-                <li><strong>Payment Information:</strong> Settlement records are shared with relevant parties involved in the transaction</li>
+                <li>Your name and profile information are visible to other group members</li>
+                <li>Expenses you create or participate in are visible to relevant group members</li>
+                <li>Your payment history within the group is visible to other participants</li>
+                <li>Balance information is shared among group members as necessary for expense tracking</li>
             </ul>
 
-            <h3>With Third Parties</h3>
-            <ul>
-                <li><strong>Service Providers:</strong> With Firebase/Google for data storage and analytics</li>
-                <li><strong>Legal Requirements:</strong> When required by law, court order, or government request</li>
-                <li><strong>Business Transfers:</strong> In connection with any merger, sale, or acquisition of our business</li>
-                <li><strong>With Your Consent:</strong> Any other sharing with your explicit permission</li>
-            </ul>
+            <h3>Third-Party Services</h3>
+            <p>We use Firebase (Google Cloud Services) to store and process your data. Your information may be transferred to and processed in the United States or other countries where Google operates data centers.</p>
 
-            <h2>Data Retention and Deletion</h2>
-            <p>We retain your personal data as long as your account is active. When you delete your account:</p>
-            <ul>
-                <li>Your personal profile information is permanently deleted</li>
-                <li>Your name in shared expenses and groups is changed to "Former Member"</li>
-                <li>Historical expense data remains visible to other participants but without your identifiable information</li>
-                <li>Receipt images you uploaded are deleted</li>
-                <li>Complete deletion may take up to 30 days to process across all systems</li>
-            </ul>
+            <h3>Legal Requirements</h3>
+            <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
 
-            <h2>International Data Transfers</h2>
-            <p>Your personal data may be transferred to and processed in the United States, where our service providers (including Firebase/Google) operate. We ensure appropriate safeguards are in place, including:</p>
+            <h2>Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information:</p>
             <ul>
-                <li>Standard Contractual Clauses approved by the European Commission</li>
-                <li>Adequate security measures to protect your data</li>
-                <li>Compliance with applicable data protection laws</li>
+                <li><strong>Encryption:</strong> Data is encrypted in transit and at rest</li>
+                <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis</li>
+                <li><strong>Regular Updates:</strong> We regularly update our security practices and systems</li>
+                <li><strong>Third-Party Security:</strong> We rely on Google Firebase's enterprise-grade security infrastructure</li>
             </ul>
 
             <h2>Your Privacy Rights</h2>
-
             <div class="rights-grid">
                 <div class="rights-card">
-                    <h4>For EU and UK Residents (GDPR)</h4>
-                    <p>You have the following rights:</p>
-                    <ul>
-                        <li><strong>Right of Access:</strong> Request copies of your personal data</li>
-                        <li><strong>Right of Rectification:</strong> Request correction of inaccurate data</li>
-                        <li><strong>Right of Erasure:</strong> Request deletion of your data</li>
-                        <li><strong>Right of Restriction:</strong> Request limitation of processing</li>
-                        <li><strong>Right of Data Portability:</strong> Request transfer of your data</li>
-                        <li><strong>Right to Object:</strong> Object to processing of your data</li>
-                        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
-                    </ul>
+                    <h4>Access Your Data</h4>
+                    <p>You can view and manage your personal information within the BuddySplit app settings.</p>
                 </div>
-
                 <div class="rights-card">
-                    <h4>For California Residents (CCPA/CPRA)</h4>
-                    <p>California residents have additional rights:</p>
-                    <ul>
-                        <li><strong>Right to Know:</strong> Request information about data collection and use</li>
-                        <li><strong>Right to Delete:</strong> Request deletion of personal information</li>
-                        <li><strong>Right to Opt-Out:</strong> Opt out of sale or sharing of personal information</li>
-                        <li><strong>Right to Non-Discrimination:</strong> Not receive discriminatory treatment for exercising privacy rights</li>
-                    </ul>
-                    <p>We do not sell or share personal information for cross-context behavioral advertising.</p>
+                    <h4>Update Information</h4>
+                    <p>You can update your profile information, including name and email address, through the app.</p>
+                </div>
+                <div class="rights-card">
+                    <h4>Delete Account</h4>
+                    <p>You can delete your account and associated data through the app settings or by contacting us.</p>
+                </div>
+                <div class="rights-card">
+                    <h4>Data Portability</h4>
+                    <p>You can export your expense data from within the application.</p>
                 </div>
             </div>
 
-            <h4>Legal Basis for Processing</h4>
-            <p>We process your data based on:</p>
+            <h2>Data Retention</h2>
+            <p>We retain your information for as long as necessary to provide our services and comply with legal obligations:</p>
             <ul>
-                <li><strong>Contractual Necessity:</strong> To provide our bill-splitting service</li>
-                <li><strong>Legitimate Interests:</strong> For app improvement, security, and analytics</li>
-                <li><strong>Consent:</strong> For optional features like contact access and push notifications</li>
+                <li><strong>Account Data:</strong> Retained until you delete your account</li>
+                <li><strong>Expense Data:</strong> Retained for the duration of group participation and for a reasonable period after leaving groups</li>
+                <li><strong>Usage Data:</strong> Typically retained for up to 2 years for analytics and improvement purposes</li>
+                <li><strong>Legal Requirements:</strong> Some data may be retained longer if required by law</li>
             </ul>
-
-            <h2>Data Security</h2>
-            <p>We implement appropriate security measures to protect your personal data, including:</p>
-            <ul>
-                <li>Encryption of data in transit and at rest</li>
-                <li>Regular security assessments and updates</li>
-                <li>Access controls and authentication measures</li>
-                <li>Secure cloud storage through Firebase</li>
-            </ul>
-            <p>However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
 
             <h2>Children's Privacy</h2>
-            <p>Our Service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. If we discover we have collected personal information from a child under 13 without parental consent, we will delete that information promptly.</p>
+            <p>BuddySplit is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us, and we will take steps to remove such information.</p>
 
-            <h2>Push Notifications</h2>
-            <p>We may send push notifications about:</p>
-            <ul>
-                <li>New expenses added to your groups</li>
-                <li>Payment requests and settlements</li>
-                <li>Important account or security updates</li>
-            </ul>
-            <p>You can disable push notifications at any time through your device settings.</p>
+            <h2>International Data Transfers</h2>
+            <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country. We take appropriate measures to ensure your information receives adequate protection.</p>
 
             <h2>Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by:</p>
             <ul>
-                <li>Posting the new Privacy Policy in the app</li>
-                <li>Sending a push notification or email notification</li>
-                <li>Updating the "Last updated" date at the top of this policy</li>
+                <li>Posting the new Privacy Policy on this page</li>
+                <li>Updating the "Last updated" date at the top of this Privacy Policy</li>
+                <li>Sending you a notification through the app for material changes</li>
             </ul>
-            <p>Changes become effective immediately upon posting unless otherwise stated.</p>
+            <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
 
             <div class="contact-section">
                 <h2>Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:</p>
+                <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us:</p>
                 <ul>
-                    <li><strong>Email:</strong> <a href="mailto:support@buddysplit.malihsolutions.co.uk">support@buddysplit.malihsolutions.co.uk</a></li>
-                    <li><strong>Response Time:</strong> We will respond to privacy requests within 30 days</li>
+                    <li><strong>Through the app:</strong> Use the "Contact Support" feature in BuddySplit settings</li>
+                    <li><strong>By email:</strong> Contact us through our support channels</li>
                 </ul>
+                <p>We will respond to your privacy-related inquiries within a reasonable timeframe.</p>
             </div>
-
-            <h2>Jurisdiction</h2>
-            <p>This Privacy Policy is governed by the laws of the United Kingdom. For EU residents, this policy also complies with the General Data Protection Regulation (GDPR). For California residents, this policy complies with the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA).</p>
         </div>
     </div>
 
