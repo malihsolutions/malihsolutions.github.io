@@ -204,9 +204,14 @@
             margin-bottom: 40px;
         }
 
-        .app-screenshot {
+        .screenshot-item {
             width: 100%;
             max-width: 300px;
+            text-align: center;
+        }
+
+        .app-screenshot {
+            width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -218,8 +223,15 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
+        .screenshot-caption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: var(--text-medium);
+            line-height: 1.4;
+        }
+
         @media (max-width: 600px) {
-            .app-screenshot {
+            .screenshot-item {
                 max-width: 100%;
             }
         }
@@ -265,15 +277,26 @@
 
         <h2>App Screenshots</h2>
         <div class="app-screenshots">
-            <img src="placeholder-dashboard.png" alt="BuddySplit Dashboard Screenshot" class="app-screenshot">
-            <img src="placeholder-add-expense.png" alt="BuddySplit Add Expense Screenshot" class="app-screenshot">
-            <img src="placeholder-balances.png" alt="BuddySplit Balances Screenshot" class="app-screenshot">
-            <img src="placeholder-invite-friends.png" alt="BuddySplit Invite Friends Screenshot" class="app-screenshot">
+            <div class="screenshot-item">
+                <img src="app-screenshots/dashboard.png" alt="BuddySplit Dashboard Screenshot" class="app-screenshot">
+                <p class="screenshot-caption">Your groups at a glance - easily navigate between different expense groups</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="app-screenshots/expense-list.png" alt="BuddySplit Expense List Screenshot" class="app-screenshot">
+                <p class="screenshot-caption">View all expenses in a group with categories and split details</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="app-screenshots/balances.png" alt="BuddySplit Balances Screenshot" class="app-screenshot">
+                <p class="screenshot-caption">See who owes what with clear balance breakdowns</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="app-screenshots/payments.png" alt="BuddySplit Payments Screenshot" class="app-screenshot">
+                <p class="screenshot-caption">Track all payments with easy filtering options</p>
+            </div>
         </div>
 
         <div class="call-to-action">
             <a href="YOUR_APP_STORE_LINK_HERE" class="button app-store-button" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-            <a href="YOUR_PLAY_STORE_LINK_HERE" class="button play-store-button" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
         </div>
     </div>
 
