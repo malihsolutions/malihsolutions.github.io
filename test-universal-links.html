@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Links Test - BuddySplit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .test-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #5265FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .test-link:hover {
+            background: #4054E6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Universal Links Test for BuddySplit</h1>
+    <p>Test these links on your iOS device to verify Universal Links are working:</p>
+    
+    <a href="https://malihsolutions.co.uk/product/buddysplit/join-group?code=TESTCODE&inviter=John%20Smith" class="test-link">
+        Test Join Group Link
+    </a>
+    
+    <a href="https://malihsolutions.co.uk/product/buddysplit/open-account?account_id=test123" class="test-link">
+        Test Open Account Link
+    </a>
+    
+    <h2>What should happen:</h2>
+    <ul>
+        <li><strong>If BuddySplit app is installed:</strong> The links should open directly in the app</li>
+        <li><strong>If app is not installed:</strong> The links should open the fallback web page</li>
+        <li><strong>In Gmail app:</strong> Links should work (this was the original problem!)</li>
+    </ul>
+    
+    <h2>Testing URLs:</h2>
+    <ul>
+        <li>Apple App Site Association: <a href="https://malihsolutions.co.uk/.well-known/apple-app-site-association">Check AASA file</a></li>
+        <li>Join Group Fallback: <a href="https://malihsolutions.co.uk/product/buddysplit/join-group/">View fallback page</a></li>
+    </ul>
+</body>
+</html> 

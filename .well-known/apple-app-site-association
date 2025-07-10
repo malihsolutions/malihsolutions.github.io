@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "4SV8N7Z49U.com.malihsolutions.buddysplit",
+                "paths": [
+                    "/product/buddysplit/*"
+                ]
+            }
+        ]
+    }
+}
