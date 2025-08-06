@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddySplit Group Invitation</title>
+    <meta name="description" content="You've been invited to join a BuddySplit group to share expenses with friends">
+    <link rel="icon" type="image/svg+xml" href="../transparent_logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #5265FF;
+            --dark-blue: #4054E6;
+            --light-blue: #e0f2f7;
+            --text-dark: #2c3e50;
+            --text-medium: #555;
+            --bg-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom right, var(--light-blue), #c1e4f2);
+            color: var(--text-medium);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--bg-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        h1 {
+            color: var(--text-dark);
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: var(--text-medium);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-bottom: 20px;
+        }
+
+        .download-button:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .app-store-badge img {
+            height: 60px;
+            transition: transform 0.2s ease;
+        }
+
+        .app-store-badge:hover img {
+            transform: scale(1.05);
+        }
+
+        .redirect-notice {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../transparent_logo.svg" alt="BuddySplit Logo" class="logo">
+        <h1>Group Invitation</h1>
+        <p>You've been invited to join a group on BuddySplit! Download the app to start splitting expenses with your friends.</p>
+        
+        <a href="#" id="downloadBtn" class="download-button">Download BuddySplit</a>
+        
+        <div class="redirect-notice">
+            <strong>Don't have the app?</strong><br>
+            Get BuddySplit on the App Store to join your group and start managing shared expenses.
+        </div>
+        
+        <a href="../" style="color: var(--primary-blue); text-decoration: none; margin-top: 20px; display: inline-block;">
+            Learn more about BuddySplit →
+        </a>
+    </div>
+
+    <script>
+        // Extract URL parameters to get group info
+        const urlParams = new URLSearchParams(window.location.search);
+        const groupShareCode = urlParams.get('group_share_code');
+        
+        // Update content based on parameters
+        if (groupShareCode) {
+            const titleElement = document.querySelector('h1');
+            titleElement.textContent = `Join BuddySplit Group`;
+            
+            const descElement = document.querySelector('p');
+            descElement.textContent = `You've been invited to join a group on BuddySplit! Use code ${decodeURIComponent(groupShareCode)} in the app to join and start splitting expenses.`;
+        }
+        
+        // Set up download button - for now, redirect to BuddySplit page
+        // TODO: Update this to App Store link when app is published
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // For now, redirect to your BuddySplit page
+            window.location.href = '../';
+            
+            // When you have an App Store link, replace the above with:
+            // window.location.href = 'https://apps.apple.com/app/id[YOUR_APP_ID]';
+        });
+    </script>
+</body>
+</html> 
