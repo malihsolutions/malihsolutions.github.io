@@ -36,7 +36,7 @@
         .header {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
             color: white;
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
             box-shadow: 0 10px 30px rgba(82, 101, 255, 0.3);
         }
@@ -48,21 +48,21 @@
         }
 
         .header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .header p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             opacity: 0.9;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .logo {
-            max-width: 80px;
-            height: 80px;
-            margin: 0 auto 20px auto;
+            max-width: 60px;
+            height: 60px;
+            margin: 0 auto 15px auto;
             display: block;
             background: white;
             border-radius: 50%;
@@ -241,21 +241,33 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5em;
+            .header {
+                padding: 25px 0;
             }
             
-            .header {
-                padding: 40px 0;
+            .header h1 {
+                font-size: 1.8em;
+                margin-bottom: 8px;
+            }
+            
+            .header p {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+            
+            .logo {
+                max-width: 45px;
+                height: 45px;
+                margin: 0 auto 12px auto;
             }
             
             .content {
-                padding: 30px 20px;
-                margin: 20px;
+                padding: 25px 15px;
+                margin: 15px;
             }
             
             h2 {
-                font-size: 1.8em;
+                font-size: 1.6em;
             }
             
             .rights-grid {
